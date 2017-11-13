@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css" />
+		<link rel="stylesheet" type="text/css" href="../css/goods.css" />
+		<script type="text/javascript" src="../js/jquery-1.11.1.js">
+		</script>
+		<script type="text/javascript">
+			$(function() {
+				var num = 0;
+				var timer;
+				var timerTwo;
+
+				function aa() {
+					clearInterval(timer);
+					timer = setInterval(function() {
+						num = num + 1
+						if(num > 4) {
+							num = 0
+//							$('.banner2').css('left', '0');
+//							num=1;
+						}
+//						$('.banner2').animate({left:-1911*num+'px'},1500)				
+						$('.banner2').css('left', -1911 * num + 'px'); 
+						$('#banner span').eq(num).addClass('span1').siblings('span').removeClass('span1')
+					}, 1500)
+				}
+				aa();
+				$('#dingshi').hover(function() {
+					clearInterval(timer);
+				}, function() {
+					aa();
+				});
+
+				$('#banner1 span').click(function(event) {
+					num = num + 1
+					if(num > 4) {
+						num = 0
+					}
+					$(this).addClass('span1').siblings('span').removeClass('span1');
+					$('.banner2').css('left', -1911 * num + 'px');
+				});
+				
+                    var i=0;
+				$('.two').click(function(event) {
+				    i = $(this).index('.two');
+        			if($('.left ul').eq(i).css('display')=='block'){
+						$('.two').eq(i).css('background-position', '-44px -16px');
+        			}else{
+        				
+        				$( '.two').eq(i).css('background-position', '-11px -47px');
+        			}					
+					$('.three').eq(i).slideToggle(500).siblings('.three').slideUp(500).css('background-position', '-11px -47px')
+//					$('.three').eq(i).slideToggle(500).parent().siblings('a').children('.three').slideUp(500)
+					
+				});			
+
+			})
+		</script>
+	</head>
+
+	<body>
+		<nav>
+			<div>
+				<ul>
+					<li>收藏本站</li>
+					<li>设为首页</li>
+					<li>星期五</li>
+					<li>2015年11月13日</li>
+				</ul>
+			</div>
+			<img src="../images/logo.jpg" />
+			<ul>
+				<li>
+					<a href="index.html">首页</a>
+				</li>
+				<li>
+					<a href="company.html">公司介绍</a>
+				</li>
+				<li>
+					<a href="product.html">产品中心</a>
+				</li>
+				<li>
+					<a href="news.html">新闻中心</a>
+				</li>
+				<li>
+					<a href="contact.html">联系我们</a>
+				</li>
+			</ul>
+			<input type="text" name="" id="" value="" placeholder="搜索" />
+			<img src="../images/search.png" />
+		</nav>
+		<banner>
+			<div id="banner">
+				<div id="dingshi">
+					<ul class="banner2">
+						<li><img src="../images/banner01.jpg" alt="" /></li>
+						<li><img src="../images/banner02.jpg" alt="" /></li>
+						<li><img src="../images/banner03.jpg" alt="" /></li>
+						<li><img src="../images/banner01.jpg" alt="" /></li>
+						<li><img src="../images/banner02.jpg" alt="" /></li>
+					</ul>
+				</div>
+				<div id="banner1">
+					<span class="span1">						
+					</span>
+					<span>						
+					</span>
+					<span>						
+					</span>
+					<span>						
+					</span>
+					<span>						
+					</span>
+				</div>
+			</div>
+		</banner>
+		<div id="breadCrumb">
+			<div id="breadCrumb1">
+				<p>
+					您所在的位置 ： ：
+				</p>
+				<a href="index.html">首页>></a>
+				<a href="company.html">产品中心</a>
+			</div>
+
+		</div>
+		<content>
+			<div id="content1">
+					<div class="left">
+					
+						<div class="one">
+							<h4>公司介绍</h4>
+						</div>
+					
+						<div class="xihuaxian1"></div>
+					
+						<div class="two">
+							<h4>护肤产品</h4>
+						</div>
+						<ul class="three">
+							<li>文人理念</li>
+							<li>顾客理念</li>
+						</ul>
+					
+						<div class="xihuaxian2"></div>
+					
+						<div class="two">
+							<h4>彩妆产品</h4>
+						</div>
+						<ul class="three">
+							<li>资深文化</li>
+							<li>历史文化</li>
+						</ul>
+					
+						<div class="xihuaxian2"></div>
+					
+							<div class="one">
+								<h4>服务热线</h4>
+							</div>
+						<div class="xihuaxian1"></div>
+					
+						<div class="two">
+							<h4>销售咨询</h4>
+						</div>
+					
+						<ul class="three">
+							<li>
+								<p>028-4764178</p>
+							</li>
+							<li>
+								<p>028-4764178</p>
+							</li>
+						</ul>
+						<div class="xihuaxian2"></div>
+					
+						<div class="two">
+							<h4>售后服务热线</h4>
+						</div>
+					
+						<ul class="three">
+							<li>
+								<p>028-4764178</p>
+							</li>
+							<li>
+								<p>028-4764178</p>
+							</li>
+						</ul>
+						<div class="xihuaxian2"></div>
+					
+					</div>
+				<div class="right">
+					<h3>玫瑰精华护手霜</h3>
+					<div id="right1">
+						<img src="../images/news.jpg" />
+					</div>
+					<div id="right2">
+						<p>七化建公司处于竞争领域，具有高度的市场化特点。一方面，市场环境决定我们的工作重点，市场需求引导我们采取必要的工作措施；另一方面，我们的各项工作，要着眼于适应市场、开拓市场、增强核心竞争力和持续占有市场份额。我们必须进一步树立市场观念，用科学的机制激励人，用优美的环境培育人。按照市场经济的要求，以市场为导向，努力调整企业体制和各项工作机制，在市场对我们的考验中，交出合格的答卷企业发展目标是企业面向未来的理想，是企业发展的希望所在。 经过40年的发展，公司在技术力量、管理水平、队伍素质、国内外市场开拓和经营业绩等方面，形成了明显的优势，已经具备国内外施工总承包能力，这是实现企业发展目标的有利条件。 经济全球化的市场必定是国际性的。在竞争激烈的市场环境中，要努力提高对国内外市场的适应性和包容性，充分运用和发挥企业的整体优势，抓住机遇，寻求更大的市场份额和更广阔的发展空间，逐步把公司建设成为具有国内外工程总承包能力的国际型工程公司。 要努力开发人力资源，激发员工的积极性、创造性和团队精神。这一发展目标是中国化学工程第七建设公司不倦的追求。只要我们勇于迎接挑战，艰苦奋斗、扬长避短，矢志不渝.
+						</p>
+					</div>
+					<div id="right3">
+						<span><a href="">上一篇：紫外线 </a></span>
+						<span><a href="">下一篇 : 紫外线</a></span>
+					</div>
+				</div>
+			</div>
+
+		</content>
+		<footer>
+			<div>
+				<img src="../images/wei.jpg" />
+				<div id="footer1">
+					<ul>
+						<li>
+							<a href="index.html">首页 &nbsp;&nbsp;|</a>
+						</li>
+						<li>
+							<a href="company.html">公司介绍 &nbsp;&nbsp;|</a>
+						</li>
+						<li>
+							<a href="contact.html">产品中心 &nbsp;&nbsp;|</a>
+						</li>
+						<li>
+							<a href="news.html">新闻中心 &nbsp;&nbsp;|</a>
+						</li>
+						<li>
+							<a href="contact.html">联系我们 &nbsp;&nbsp;|</a>
+						</li>
+					</ul>
+					<p>Copyright &copy; 2015 NiPic.com All Rights Reserved 版权所有.妆点尚品 粤ICP备14012994号-1</p>
+					<p>增值电信业务经营许可证 ： 浙B2-20140130 本站法律顾问： 陈明律师</p>
+					<p>妆点尚品 是网络服务平台方，若您发现您的权利被侵害 请发起消费者协会投诉</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+
+</html>

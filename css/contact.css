@@ -1,0 +1,32 @@
+#content1{
+	width: 100%;
+	height: 1000px;
+}
+nav ul li:nth-of-type(5) a{
+	color: red;
+}
+#content1 .right{
+	width: 930px;
+	height: 700px;
+	margin-left: 80px;
+	float: left;
+}
+#content1 .right>div{
+	display: block;
+}
+#content1 .right h3{
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+#right2{
+	width: 900px;
+	height: 100px;
+}
+#right2 ul{
+	float: left;
+	margin-right:190px ;	
+}
+#right2 ul li{
+	line-height: 30px;
+	font-size: 14px;
+}

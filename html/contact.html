@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css" />
+		<link rel="stylesheet" type="text/css" href="../css/contact.css" />
+		<script type="text/javascript" src="../js/jquery-1.11.1.js">
+		</script>
+		<script type="text/javascript">
+			$(function() {
+				var num = 0;
+				var timer;
+				var timerTwo;
+
+				function aa() {
+					clearInterval(timer);
+					timer = setInterval(function() {
+						num = num + 1
+						if(num > 4) {
+							num = 0
+						}
+						//	                $(this).addClass('span1').siblings('span').removeClass('span1');				
+						$('.banner2').css('left', -1911 * num + 'px');
+						$('#banner span').eq(num).addClass('span1').siblings('span').removeClass('span1')
+					}, 1500)
+				}
+				aa();
+				$('#dingshi').hover(function() {
+					clearInterval(timer);
+				}, function() {
+					aa();
+				});
+
+				$('#banner1 span').click(function(event) {
+					num = num + 1
+					if(num > 4) {
+						num = 0
+					}
+					$(this).addClass('span1').siblings('span').removeClass('span1');
+					$('.banner2').css('left', -1911 * num + 'px');
+				});
+
+				$('.two').click(function(event) {
+				    i = $(this).index('.two');
+        			if($('.left ul').eq(i).css('display')=='block'){
+						$('.two').eq(i).css('background-position', '-44px -16px');
+        			}else{
+        				
+        				$( '.two').eq(i).css('background-position', '-11px -47px');
+        			}					
+					$('.three').eq(i).slideToggle(500).siblings('.three').slideUp(500).css('background-position', '-11px -47px')
+//					$('.three').eq(i).slideToggle(500).parent().siblings('a').children('.three').slideUp(500)
+					
+				});
+
+			})
+		</script>
+	</head>
+
+	<body>
+		<nav>
+			<div>
+				<ul>
+					<li>收藏本站</li>
+					<li>设为首页</li>
+					<li>星期五</li>
+					<li>2015年11月13日</li>
+				</ul>
+			</div>
+			<img src="../images/logo.jpg" />
+			<ul>
+				<li>
+					<a href="index.html">首页</a>
+				</li>
+				<li>
+					<a href="company.html">公司介绍</a>
+				</li>
+				<li>
+					<a href="product.html">产品中心</a>
+				</li>
+				<li>
+					<a href="news.html">新闻中心</a>
+				</li>
+				<li>
+					<a href="contact.html">联系我们</a>
+				</li>
+			</ul>
+			<input type="text" name="" id="" value="" placeholder="搜索" />
+			<img src="../images/search.png" />
+		</nav>
+		<banner>
+			<div id="banner">
+				<div id="dingshi">
+					<ul class="banner2">
+						<li><img src="../images/banner01.jpg" alt="" /></li>
+						<li><img src="../images/banner02.jpg" alt="" /></li>
+						<li><img src="../images/banner03.jpg" alt="" /></li>
+						<li><img src="../images/banner01.jpg" alt="" /></li>
+						<li><img src="../images/banner02.jpg" alt="" /></li>
+					</ul>
+				</div>
+				<div id="banner1">
+					<span class="span1">						
+					</span>
+					<span>						
+					</span>
+					<span>						
+					</span>
+					<span>						
+					</span>
+					<span>						
+					</span>
+				</div>
+			</div>
+		</banner>
+		<div id="breadCrumb">
+			<div id="breadCrumb1">
+				<p>
+					您所在的位置 ： ：
+				</p>
+				<a href="">首页>></a>
+				<a href="">联系我们</a>
+			</div>
+
+		</div>
+		<content>
+			<div id="content1">
+					<div class="left">
+					
+						<div class="one">
+							<h4>联系我们</h4>
+						</div>
+					
+						<div class="xihuaxian1"></div>
+					
+						<div class="two">
+							<h4>联系方式</h4>
+						</div>
+						<ul class="three">
+							<li>电话：1860716990</li>
+							<li>280625450(QQ)</li>
+						</ul>
+					
+						<div class="xihuaxian2"></div>
+					
+						<div class="two">
+							<h4>客户留言</h4>
+						</div>
+						<ul class="three">
+							<li>产品留言</li>
+							<li>公司合作</li>
+						</ul>
+					
+						<div class="xihuaxian2"></div>
+					
+							<div class="one">
+								<h4>服务热线</h4>
+							</div>
+						<div class="xihuaxian1"></div>
+					
+						<div class="two">
+							<h4>销售咨询</h4>
+						</div>
+					
+						<ul class="three">
+							<li>
+								<p>028-4764178</p>
+							</li>
+							<li>
+								<p>028-4764178</p>
+							</li>
+						</ul>
+						<div class="xihuaxian2"></div>
+					
+						<div class="two">
+							<h4>售后服务热线</h4>
+						</div>
+					
+						<ul class="three">
+							<li>
+								<p>028-4764178</p>
+							</li>
+							<li>
+								<p>028-4764178</p>
+							</li>
+						</ul>
+						<div class="xihuaxian2"></div>
+					
+					</div>
+				<div class="right">
+					<h3>联系方式</h3>
+					<div id="right1">
+						<img src="../images/lianxiwomen.png" />
+					</div>
+					<h3>联系妆点尚品</h3>
+					<div id="right2">
+						<ul>
+							<li>公司地址：广州林厦市解放大道世贸广场</li>
+							<li>服务电话：400-027-9179（免长途费）</li>
+							<li>官方网站：
+								<a href="">www.zhuangdian.com</a>
+							</li>
+						</ul>
+						<ul>
+							<li>商务合作：027-85581799 18607169990</li>
+							<li>2803254822（QQ）</li>
+							<li>客服邮箱：199219299@qq.com</li>
+						</ul>
+					</div>
+					<h3>公司地址</h3>
+					<div id="right3">
+						<img src="../images/img7.jpg" />
+					</div>
+				</div>
+			</div>
+
+		</content>
+		<footer>
+			<div>
+				<img src="../images/wei.jpg" />
+				<div id="footer1">
+					<ul>
+						<li>
+							<a href="index.html">首页 &nbsp;&nbsp;|</a>
+						</li>
+						<li>
+							<a href="company.html">公司介绍 &nbsp;&nbsp;|</a>
+						</li>
+						<li>
+							<a href="contact.html">产品中心 &nbsp;&nbsp;|</a>
+						</li>
+						<li>
+							<a href="news.html">新闻中心 &nbsp;&nbsp;|</a>
+						</li>
+						<li>
+							<a href="contact.html">联系我们 &nbsp;&nbsp;|</a>
+						</li>
+					</ul>
+					<p>Copyright &copy; 2015 NiPic.com All Rights Reserved 版权所有.妆点尚品 粤ICP备14012994号-1</p>
+					<p>增值电信业务经营许可证 ： 浙B2-20140130 本站法律顾问： 陈明律师</p>
+					<p>妆点尚品 是网络服务平台方，若您发现您的权利被侵害 请发起消费者协会投诉</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+
+</html>

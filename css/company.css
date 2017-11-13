@@ -1,0 +1,32 @@
+nav ul li:nth-of-type(2) a{
+	color: red;
+}
+#content1 .right div img{
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+#content1 .right h3{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+#content1 .right div{
+	width: 1000px;
+	height: 700px;
+	margin-left: 35px;
+	float: left;
+	display: none;
+}
+#content1 .right div:nth-of-type(4) img{
+	width: 350px;
+}
+#content1 .right div:nth-of-type(5) img{
+	width: 350px;
+}
+#content1 .right div p{
+	font-size: 14px;
+	color: #666;
+	line-height: 22px;
+	text-indent: 2em;
+}
+
